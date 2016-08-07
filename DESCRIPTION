@@ -5,7 +5,7 @@ Title: Construction of regular and irregular histograms with different
 Version: 0.0-24
 Date: 2016-08-07
 Author: Thoralf Mildenberger, Yves Rozenholc, David Zasada.
-Maintainer: Thoralf Mildenberger <mildenbe@statistik.tu-dortmund.de>
+Maintainer: Thoralf Mildenberger <mild@zhaw.ch>
 Description: Automatic construction of regular and irregular histograms
         as described in Rozenholc/Mildenberger/Gather (2009).
 License: GPL (>= 2)

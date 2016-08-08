@@ -36,11 +36,11 @@
   
   # histogram type: regular
   if ( tolower(type)=="regular" || tolower(type)=="r" )
-     out<-histogram.regular( y, penalty=penalty, breaks=breaks, control=control, right=right, verbose=verbose, plot=plot, yvarname=deparse( substitute(y)) )$H
+     out<-histogram.regular( y, penalty=penalty, breaks=breaks, control=control, right=right, verbose=verbose, plot=plot, yvarname=xname )$H
 
   # histogram type: irregular
   if ( tolower(type)=="irregular" || tolower(type)=="i" )
-     out<-histogram.irregular( y, grid=grid, breaks=breaks, penalty=penalty, greedy=greedy, control=control, right=right, verbose=verbose, plot=plot, yvarname=deparse( substitute(y)) )$H
+     out<-histogram.irregular( y, grid=grid, breaks=breaks, penalty=penalty, greedy=greedy, control=control, right=right, verbose=verbose, plot=plot, yvarname=xname )$H
 
   # histogram type: combined
   if ( tolower(type)=="combined" || tolower(type)=="c" ) {

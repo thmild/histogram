@@ -36,7 +36,7 @@ verbose = TRUE, plot = TRUE)
   is constructed by a greedy step to make the search procedure feasible. Has no effect for regular histograms.}
   \item{right}{logical; if \code{TRUE}, the histograms cells are right-closed (left open) intervals.}
   \item{control}{list of additional control parameters. Meaning and default values depend on settings of \code{type}, 
-  \code{penalty} and \code{grid}. See below.}.
+  \code{penalty} and \code{grid}. See below.}
   \item{verbose}{logical; if \code{TRUE} (default), some information is given during histogram construction and the resulting \code{histogram} 
   object is printed.}
   \item{plot}{logical. If \code{TRUE} (default), the histogram is plotted.}

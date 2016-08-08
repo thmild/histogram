@@ -1,6 +1,17 @@
 `histogram` <- function( y, type="combined", grid="data", breaks=NULL, penalty="default", greedy=TRUE, right=TRUE, control=list(), verbose=TRUE, plot=TRUE ) {
 
+  # save y name for later (before doing anything to it)
+  
+  xname <- deparse( substitute(y))
+  
   # check data vector
+
+  if ( any(is.na(y)) ) {
+    warning("Removing NAs from data vector")
+    y <- y[!is.na(y)]
+  }
+    
+  
   if ( length(unique(y))<2 )
     stop( "data vector must consist of at least two distinct values!" )
     
@@ -61,8 +72,9 @@
 	  }
 	         
     # Bugfix: Name of y-var gets lost above - reset it.
-    out$xname = deparse( substitute(y))
-	  
+
+    out$xname <- xname
+    
 	  if ( plot ) 
 	    plot(out, freq=FALSE)
 	}

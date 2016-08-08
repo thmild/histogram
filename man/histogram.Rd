@@ -191,6 +191,8 @@ Hall, P. and Hannan, E. J. (1988). On stochastic complexity and nonparametric de
 Rozenholc, Y, Mildenberger, T. and Gather, U. (2009). Combining regular and irregular histograms by penalized likelihood. 
 Discussion Paper 31/2009, SFB 823, TU Dortmund.
 \url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/SFB_823/discussion_papers/2009/31_09_rozenholc_mildenberger_gather.pdf}
+
+Rozenholc, Y., Mildenberger, T., Gather, U. (2010). Combining regular and irregular histograms by penalized likelihood. Computational Statistics and Data Analysis 54, 3313-3323.
 }
 \author{Thoralf Mildenberger, Yves Rozenholc, David Zasada.}
 %\note{ ~~further notes~~ 

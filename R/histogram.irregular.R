@@ -251,7 +251,7 @@
     pen <- cont2$c*logchoose(n-1,D-1) + log(1:D)^2.5
     # compute dynamically the max likelihood for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=FALSE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=FALSE,msg=verbose)
     D0 <- which.max(tmp$extreme-pen)
     lhvalue<-max(tmp$extreme-pen)-n*log(b-a)-n*log(n)+cont2$alpha
   }
@@ -259,7 +259,7 @@
     pen <- cont2$c*logchoose(n-1,D-1) + cont2$alpha*(0:(D-1)) + log(1:D)^2.5
     # compute dynamically the max likelihood for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=FALSE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=FALSE,msg=verbose)
     D0 <- which.max(tmp$extreme-pen)
     lhvalue<-max(tmp$extreme-pen)-n*log(b-a)-n*log(n)
   }
@@ -268,7 +268,7 @@
     2*sqrt(cont2$c*cont2$alpha*(0:(D-1))*(logchoose(n-1,D-1)+cont2$k*log(1:D)) )
     # compute dynamically the max likelihood for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=FALSE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=FALSE,msg=verbose)
     D0 <- which.max(tmp$extreme-pen)
     lhvalue<-max(tmp$extreme-pen)-n*log(b-a)-n*log(n)
   }
@@ -276,7 +276,7 @@
     pen <- cont2$alpha*(0:(D-1))
     # compute dynamically the max likelihood for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=FALSE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=FALSE,msg=verbose)
     D0 <- which.max(tmp$extreme-pen)
     lhvalue<-max(tmp$extreme-pen)-n*log(b-a)-n*log(n)
   }
@@ -284,14 +284,14 @@
     pen <- cont2$alpha*log(n)*(0:(D-1))
     # compute dynamically the max likelihood for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=FALSE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=FALSE,msg=verbose)
     D0 <- which.max(tmp$extreme-pen)
     lhvalue<-max(tmp$extreme-pen)-n*log(b-a)-n*log(n)
   }
   if (penalty=="cv") {
     # compute dynamically the cv scores for irregular histograms with
     # d bins, d varying between 1 and D
-    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,D=D,mini=TRUE,msg=verbose)
+    tmp <- DynamicExtreme(weightfunction,n=length(BL)-1,Dmax=D,mini=TRUE,msg=verbose)
     D0 <- which.min(tmp$extreme)
   }
     
@@ -305,12 +305,12 @@
   H <- hist(y,breaks=a+(b-a)*bounds,right=right,plot=FALSE)
   
   # Bugfix: Name of y-var gets lost above - reset it.
-  H$xname = yvarname
+  H$xname <- yvarname
 
   # Plot
   if (plot)
     plot( H, freq=FALSE )
 
-  return(list(H=H,lhvalue=lhvalue))
+  return(list(H=H, lhvalue=lhvalue))
 }
 

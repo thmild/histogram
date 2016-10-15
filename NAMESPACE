@@ -1,2 +1,4 @@
+importFrom("graphics", "hist")
+importFrom("stats", "quantile")
 export(histogram)
  

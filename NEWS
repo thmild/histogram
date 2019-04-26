@@ -1,4 +1,4 @@
-Version 0.0-25, released 2019/04/2x:
+Version 0.0-25, released 2019/04/27:
 
 * Now allows for passing graphic parameters to hist() via ... argument
 * Updated dead link to technical report

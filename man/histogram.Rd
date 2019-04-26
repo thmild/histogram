@@ -11,8 +11,8 @@ The final estimate is the one with the larger penalized likelihood.
 \usage{
 histogram(y, type = "combined", grid = "data", 
 breaks = NULL, penalty = "default", 
-greedy = TRUE, right=TRUE, control = list(), 
-verbose = TRUE, plot = TRUE)
+greedy = TRUE, right=TRUE, freq=FALSE, control = list(), 
+verbose = TRUE, plot = TRUE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -35,11 +35,13 @@ verbose = TRUE, plot = TRUE)
   \item{greedy}{logical; if \code{TRUE} and \code{type="irregular"}, a subgrid of the finest grid 
   is constructed by a greedy step to make the search procedure feasible. Has no effect for regular histograms.}
   \item{right}{logical; if \code{TRUE}, the histograms cells are right-closed (left open) intervals.}
+  \item{freq}{logical; if \code{TRUE}, the y-axis gives counts in case of a regular histogram, otherwise density values are given. For irregular histograms, the y-axis always shows the density. Unlike \code{hist()}, defaults to \code{FALSE}.}
   \item{control}{list of additional control parameters. Meaning and default values depend on settings of \code{type}, 
   \code{penalty} and \code{grid}. See below.}
   \item{verbose}{logical; if \code{TRUE} (default), some information is given during histogram construction and the resulting \code{histogram} 
   object is printed.}
   \item{plot}{logical. If \code{TRUE} (default), the histogram is plotted.}
+  \item{...}{further arguments and graphical parameters passed to \code{hist()}.}
 }
 \details{
 The \code{histogram} procedure produces a histogram, i.e. a piecewise constant density estimate 
@@ -177,7 +179,7 @@ argument in \code{\link{quantile}}, whose default \code{7} is also the default h
 }
 
 \references{
-Birgé, L. and Rozenholc, Y. (2006). How many bins should be put in a regular histogram? ESAIM: Probability and Statistics,
+Birg?, L. and Rozenholc, Y. (2006). How many bins should be put in a regular histogram? ESAIM: Probability and Statistics,
 10, 24-45. 
 
 Celisse, A. and Robin, S. (2008). Nonparametric density estimation by exact leave-p-out
@@ -190,7 +192,7 @@ Hall, P. and Hannan, E. J. (1988). On stochastic complexity and nonparametric de
 
 Rozenholc, Y, Mildenberger, T. and Gather, U. (2009). Combining regular and irregular histograms by penalized likelihood. 
 Discussion Paper 31/2009, SFB 823, TU Dortmund.
-\url{http://www.statistik.tu-dortmund.de/fileadmin/user_upload/SFB_823/discussion_papers/2009/31_09_rozenholc_mildenberger_gather.pdf}
+\url{https://eldorado.tu-dortmund.de/handle/2003/26529}
 
 Rozenholc, Y., Mildenberger, T., Gather, U. (2010). Combining regular and irregular histograms by penalized likelihood. Computational Statistics and Data Analysis 54, 3313-3323.
 }

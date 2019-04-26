@@ -1,4 +1,6 @@
-`histogram` <- function( y, type="combined", grid="data", breaks=NULL, penalty="default", greedy=TRUE, right=TRUE, control=list(), verbose=TRUE, plot=TRUE ) {
+`histogram` <- function( y, type="combined", grid="data", breaks=NULL, penalty="default", 
+                         greedy=TRUE, right=TRUE, freq=FALSE, control=list(), verbose=TRUE, plot=TRUE,
+                         ...) {
 
   # save y name for later (before doing anything to it)
   
@@ -76,7 +78,7 @@
     out$xname <- xname
     
 	  if ( plot ) 
-	    plot(out, freq=FALSE)
+	    plot(out, freq=freq, ...)
 	}
 
 

@@ -1,0 +1,24 @@
+Version 0.0-25, released 2019/04/2x:
+
+* Now allows for passing graphic parameters to hist() via ... argument
+* Updated dead link to technical report
+
+Version 0.0-24, released 2016/10/17:
+
+* NAs are now removed (giving a warning), previously histogram() failed when NAs were present
+* package is now byte-compiled on install (resulting in a speed-up for lagrer datasets) 
+* partial matchings in function call to DynamicExtreme() replaced by proper function arguments
+* added reference to published paper
+* histogram title should now be correct in all cases
+* now explicitly imports hist() and quantile()
+* some small changes to DESCRIPTION file 
+
+Version 0.0-23, released 2009/12/24
+
+
+Version 0.0-22, released 2009/12/16
+
+
+Version 0.0-21, released 2009/11/12
+
+* First release on CRAN

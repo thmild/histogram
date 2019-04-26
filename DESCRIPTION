@@ -1,7 +1,7 @@
 Package: histogram
 Type: Package
 Title: Construction of Regular and Irregular Histograms with Different Options for Automatic Choice of Bins
-Version: 0.0-24.9000
+Version: 0.0-24.9001
 Authors@R: c(person("Thoralf", "Mildenberger", role = c("aut", "cre"),
 		     email = "mild@zhaw.ch"),
 	      person("Yves", "Rozenholc", role = "aut"),

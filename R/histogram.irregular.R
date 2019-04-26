@@ -1,4 +1,5 @@
-`histogram.irregular` <- function( y, grid="data", breaks=NULL, penalty="penB", greedy=TRUE, right=TRUE, control=list(), verbose=TRUE, plot=TRUE, yvarname="y" ) {
+`histogram.irregular` <- function( y, grid="data", breaks=NULL, penalty="penB", greedy=TRUE, right=TRUE, 
+                                   control=list(), verbose=TRUE, plot=TRUE, yvarname="y", ... ) {
 
   epsilon <- 1e-7
 
@@ -309,7 +310,7 @@
 
   # Plot
   if (plot)
-    plot( H, freq=FALSE )
+    plot( H, freq=FALSE, ... )
 
   return(list(H=H, lhvalue=lhvalue))
 }

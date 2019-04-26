@@ -1,4 +1,5 @@
-`histogram.regular` <- function( y, penalty="br", breaks=NULL, control=list(), right=TRUE, verbose=TRUE, plot=TRUE, yvarname="y" ) {
+`histogram.regular` <- function( y, penalty="br", breaks=NULL, control=list(), right=TRUE, 
+                                 verbose=TRUE, plot=TRUE, freq=FALSE, yvarname="y", ... ) {
 
   # check penalty-parameter 
   penalty = tolower( penalty )
@@ -189,7 +190,7 @@
 
 
   if ( plot )
-    plot( H, freq=FALSE ) 
+    plot( H, freq=freq, ... ) 
 
   return(list(H=H,lhvalue=lhvalue) )
 }
